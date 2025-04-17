@@ -28,6 +28,33 @@
   color: #61dafb;
 }
 
+body {
+  background-image: url('https://images-cf.getpodpage.com/cdn-cgi/image/quality=70,fit=contain,format=auto,width=1920/https://s3.us-west-1.amazonaws.com/redwood-labs/showpage/uploads/images/d20c71a8-aeb3-45e9-943e-9a6b08e58b53.png');
+  /* Path to your image */
+  background-size: cover;
+  /* Make sure the background covers the entire screen */
+  background-position: center;
+  /* Center the background image */
+  background-attachment: fixed;
+  /* Keep the background fixed when scrolling */
+  color: white;
+  /* Change text color to white for better contrast with dark background */
+  font-family: 'Arial', sans-serif;
+  /* Choose a comic-like font if desired */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+}
+
+h1,
+h2,
+h3,
+p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add some shadow to text to make it stand out */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

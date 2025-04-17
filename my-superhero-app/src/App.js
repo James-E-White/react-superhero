@@ -33,7 +33,7 @@ function App() {
   }, []); // Empty array means this will run once when the app first loads
 
   return (
-    <div>
+    <div className="container">
       <div>
         <h1>Superhero Info</h1>
         {heroes.length > 0 ? (  // Check if there are multiple heroes
