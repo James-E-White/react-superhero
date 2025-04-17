@@ -10,7 +10,7 @@ function App() {
     const token = process.env.REACT_APP_SUPERHERO_API_KEY;
     const url = query
       ? `https://superheroapi.com/api.php/${token}/search/${query}`
-      : `https://superheroapi.com/api.php/${token}/random`; // Default hero
+      : `https://superheroapi.com/api.php/${token}/random`; // 
 
     try {
       const response = await fetch(url);
@@ -43,9 +43,27 @@ function App() {
                 <h2>{hero.name}</h2>
                 <div>
                   <img src={hero.image?.url} alt={hero.name} />
-                  <p>Biography: {JSON.stringify(hero.biography)}</p>
-                  <p>Powerstats: {JSON.stringify(hero.powerstats)}</p>
-                  <p>Connections: {JSON.stringify(hero.connections)}</p>
+                  <h3>Biography:</h3>
+                  <p><strong>Full Name:</strong> {hero.biography['full-name']}</p>
+                  <p><strong>Alter Egos:</strong> {hero.biography['alter-egos']}</p>
+                  <p><strong>Aliases:</strong> {hero.biography.aliases.join(', ')}</p>
+                  <p><strong>Place of Birth:</strong> {hero.biography['place-of-birth']}</p>
+                  <p><strong>First Appearance:</strong> {hero.biography['first-appearance']}</p>
+                  <p><strong>Publisher:</strong> {hero.biography.publisher}</p>
+                  <p><strong>Alignment:</strong> {hero.biography.alignment}</p>
+                  <h3>Powerstats: </h3>
+                  <p><strong>Intelligence:</strong> {hero.powerstats.intelligence}</p>
+                  <p><strong>Strength:</strong> {hero.powerstats.strength}</p>  
+                  <p><strong>Speed:</strong> {hero.powerstats.speed}</p>
+                  <p><strong>Durability:</strong> {hero.powerstats.durability}</p>
+                  <p><strong>Power:</strong> {hero.powerstats.power}</p>
+                  <p><strong>Combat:</strong> {hero.powerstats.combat}</p>
+                  <h3>Connections:</h3> 
+                  <p><strong>Group Affiliation:</strong> {hero.connections['group-affiliation']}</p>
+                  <p><strong>Relatives:</strong> {hero.connections.relatives}</p>
+                  <h3>Work:</h3>
+                  <p><strong>Occupation:</strong> {hero.work.occupation}</p>
+                  <p><strong>Base:</strong> {hero.work.base}</p>
                 </div>
               </div>
             ))}
