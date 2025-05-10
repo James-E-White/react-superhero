@@ -84,6 +84,8 @@ function App() {
         <button onClick={() => fetchHero(searchQuery)}>Search</button>
       </div>
     </div>
+
+    
   );
 }
 
